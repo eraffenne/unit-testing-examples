@@ -36,8 +36,8 @@ public class ExpectedExceptionTest {
 
         thrown.expect(IndexOutOfBoundsException.class);
         thrown.expectMessage("Index: 0, Size: 0");
-        thrown.reportMissingExceptionWithMessage("No exception was raised.");
-        list.size(); // will fail since no exception will be thrown
+        thrown.reportMissingExceptionWithMessage("No exception was thrown.");
+        list.get(0); // will fail since no exception will be thrown
     }
 
 }
