@@ -1,11 +1,10 @@
-package com.example.unittesting;
+package com.example.unittesting.fixtures;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ExceptionTest {
 
@@ -17,13 +16,12 @@ public class ExceptionTest {
         thrown.expect(IndexOutOfBoundsException.class);
         thrown.reportMissingExceptionWithMessage("No exception was thrown.");
 
-        List<Object> list = new ArrayList<Object>();
-        list.get(0);
+        new ArrayList<Object>().get(0);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void testExceptionWithAnnotation() {
-        new ArrayList<Object>().get(0);
+    @Test(expected = NullPointerException.class)
+    public void testExceptionUsingAnnotation() {
+        throw new NullPointerException();
     }
 
 
