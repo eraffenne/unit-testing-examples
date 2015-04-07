@@ -4,7 +4,6 @@ import com.example.unittesting.helpers.FakeServer;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.rules.ExternalResource;
 import org.junit.rules.TemporaryFolder;
 import org.junit.rules.TestName;
@@ -15,8 +14,6 @@ import java.io.IOException;
 public class RulesTest {
 
     private FakeServer myServer = new FakeServer(44444);
-
-    // ------------------------- Rules ----------------------------------
 
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();
@@ -42,13 +39,7 @@ public class RulesTest {
     };
 
     @Rule
-    public ExpectedException thrown = ExpectedException.none();
-
-    @Rule
     public TestName name = new TestName();
-
-
-    // ------------------------- Tests ----------------------------------
 
     @Test
     public void testWithTemporaryFolder() throws IOException {
@@ -56,22 +47,9 @@ public class RulesTest {
         System.out.println("Temporary file: " + createdFile.getPath());
     }
 
-
     @Test
     public void testWithExternalResource() {
         System.out.println("ExternalResource listening on port: " + myServer.getPort());
-    }
-
-    @Test
-    public void testNoExceptionThrown() {
-        System.out.println("Testing no exception was thrown");
-    }
-
-    @Test
-    public void testNullPointerException() {
-        thrown.expect(NullPointerException.class);
-        System.out.println("Throwing NullPointerException...");
-        throw new NullPointerException();
     }
 
     @Test
