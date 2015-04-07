@@ -1,14 +1,18 @@
 package com.example.unittesting;
 
+import com.example.unittesting.runners.suite.MyCategory;
 import org.hamcrest.Matcher;
 import org.hamcrest.core.StringStartsWith;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 public class AssertionTest {
 
     @Test
+    @Category({MyCategory.class})
     public void testEquals() {
+        System.out.println("Running testEquals");
         String expected = "Hola";
 
         String myTestString = "hola".replaceFirst("h", "H");

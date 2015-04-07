@@ -1,9 +1,11 @@
 package com.example.unittesting;
 
+import com.example.unittesting.runners.suite.MyCategory;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runners.MethodSorters;
 
 
@@ -11,6 +13,7 @@ import org.junit.runners.MethodSorters;
 public class SimpleTest {
 
     @Test
+    @Category({MyCategory.class})
     public void testOne() {
         System.out.println("Running Test 1");
 

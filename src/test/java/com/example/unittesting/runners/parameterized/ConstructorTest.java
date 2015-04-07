@@ -1,18 +1,17 @@
-package com.example.unittesting.runners;
+package com.example.unittesting.runners.parameterized;
 
 import com.example.unittesting.helpers.Calculator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class ParameterizedFieldInjectionTest {
+public class ConstructorTest {
 
     @Parameters
     public static Collection<Object[]> data() {
@@ -21,16 +20,17 @@ public class ParameterizedFieldInjectionTest {
         });
     }
 
-    @Parameter(value = 0)
-    public int input;
+    private int input;
+    private int expected;
 
-    @Parameter(value = 1)
-    public int expected;
+    public ConstructorTest(int n, int result) {
+        input = n;
+        expected = result;
+    }
 
     @Test
     public void testSumUpTo() {
         System.out.println("Testing with values: (" + input + "," + expected + ")");
         Assert.assertEquals("Wrong result", expected, Calculator.sumUpTo(input));
     }
-
 }
