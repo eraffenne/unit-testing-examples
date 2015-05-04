@@ -1,4 +1,4 @@
-package com.example.unittesting.fixtures;
+package com.example.unittesting.junit.fixtures;
 
 import org.junit.Rule;
 import org.junit.Test;

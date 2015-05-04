@@ -1,6 +1,6 @@
-package com.example.unittesting.fixtures;
+package com.example.unittesting.junit.fixtures;
 
-import com.example.unittesting.helpers.FakeResource;
+import com.example.unittesting.junit.helpers.FakeResource;
 import org.junit.*;
 
 import java.io.IOException;

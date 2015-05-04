@@ -1,4 +1,4 @@
-package com.example.unittesting.helpers;
+package com.example.unittesting.junit.helpers;
 
 public class FakeServer {
 

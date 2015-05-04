@@ -1,6 +1,6 @@
-package com.example.unittesting;
+package com.example.unittesting.junit;
 
-import com.example.unittesting.runners.suite.MyCategory;
+import com.example.unittesting.junit.runners.suite.MyCategory;
 import org.hamcrest.Matcher;
 import org.hamcrest.core.StringStartsWith;
 import org.junit.Assert;

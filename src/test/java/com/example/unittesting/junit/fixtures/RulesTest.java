@@ -1,6 +1,6 @@
-package com.example.unittesting.fixtures;
+package com.example.unittesting.junit.fixtures;
 
-import com.example.unittesting.helpers.FakeServer;
+import com.example.unittesting.junit.helpers.FakeServer;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;

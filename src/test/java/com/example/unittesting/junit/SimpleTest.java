@@ -1,6 +1,6 @@
-package com.example.unittesting;
+package com.example.unittesting.junit;
 
-import com.example.unittesting.runners.suite.MyCategory;
+import com.example.unittesting.junit.runners.suite.MyCategory;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;

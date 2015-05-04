@@ -1,4 +1,4 @@
-package com.example.unittesting;
+package com.example.unittesting.junit;
 
 import org.junit.Assert;
 import org.hamcrest.CoreMatchers;

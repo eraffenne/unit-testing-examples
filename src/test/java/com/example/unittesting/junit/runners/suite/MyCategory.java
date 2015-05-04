@@ -1,4 +1,4 @@
-package com.example.unittesting.runners.suite;
+package com.example.unittesting.junit.runners.suite;
 
 public interface MyCategory {
 

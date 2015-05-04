@@ -1,4 +1,4 @@
-package com.example.unittesting.helpers;
+package com.example.unittesting.junit.helpers;
 
 import java.io.Closeable;
 import java.io.IOException;
